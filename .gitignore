@@ -105,3 +105,6 @@ dist
 
 # Test Reports
 test_report*.html
+
+# ZAP
+options.prop

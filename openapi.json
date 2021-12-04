@@ -1,0 +1,44 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a API specifications of sports-buzz api app",
+    "version": "1.0.0",
+    "title": "Sports Buzz",
+    "contact": {
+      "email": "apiteam@swagger.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://localhost:8000"
+    }
+  },
+  "host": "s4qr6oec41.execute-api.us-east-2.amazonaws.com",
+  "basePath": "/alpha",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/test": {
+      "get": {
+        "tags": [
+          "test"
+        ],
+        "summary": "To get list of matches",
+        "description": "",
+        "operationId": "getMatches",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          }
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}
