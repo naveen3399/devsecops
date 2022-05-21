@@ -107,4 +107,4 @@ dist
 test_report*.html
 
 # ZAP
-options.prop
+# options.prop
