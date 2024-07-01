@@ -44,5 +44,9 @@ jobs:
         run: docker pull zaproxy/zap-stable
       - name: Run ZAP API Scan
         run: |
-          sudo docker run -v  $(pwd):/zap/wrk/:rw -t zaproxy/zap-stable zap-api-scan.py -t openapi.json -f openapi -c api-scan.conf
+          run: |
+          sudo docker run -v ${{ github.workspace }}:/zap/wrk/:rw -t zaproxy/zap-stable zap-api-scan.py -t openapi.json -f openapi -c api-scan.conf > zap_scan.log
+        # Optionally, output logs for debugging purposes
+      - name: Show ZAP Scan Logs
+        run: cat zap_scan.log
         # run: sudo docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-api-scan.py -t dev-wiki-api.json -f openapi -r test_report_$(date -u +'%Y%m%d').html
